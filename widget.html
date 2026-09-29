@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>丙級進度</title><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css"><meta name="theme-color" content="#14201a"></head>
+<body><div id="app" style="max-width:360px;padding-top:24px"><div id="w"></div><p class="mu" style="text-align:center"><a href="./" style="color:var(--ac)">開啟完整練習</a></p></div>
+<script>
+function r(){let s=null;try{s=JSON.parse(localStorage.getItem("ec_sum"))}catch(e){}
+const w=document.getElementById("w");
+if(!s){w.innerHTML='<div class="c">尚無進度，請先在主頁使用。</div>';return}
+const C=2*Math.PI*40,p=s.pct;
+w.innerHTML=`<div class="c hero" style="flex-direction:column;text-align:center"><div class="ring"><svg width="96" height="96"><circle cx="48" cy="48" r="40" fill="none" stroke="#ffffff44" stroke-width="9"/><circle cx="48" cy="48" r="40" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${C*(1-p/100)}"/></svg><span>${p}%</span></div><b>⚡ 丙級進度</b><div class="kp"><i>🔥 ${s.streak} 天</i><i>今日 ${s.today}/${s.goal}</i><i>正確率 ${s.acc==null?"–":s.acc+"%"}</i></div><div class="mu">${s.name}</div></div>`}
+r();addEventListener("focus",r);document.addEventListener("visibilitychange",r)
+</script></body></html>

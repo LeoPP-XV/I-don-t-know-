@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>丙級電子 練習</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#14201a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="丙級電子">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<div id="app">
+<div id="hd"><div><h1>⚡ 工業電子丙級</h1><small id="sub"></small></div><button id="who" onclick="go('me')"></button></div>
+<main id="v"></main>
+</div>
+<nav id="nav"></nav>
+<script src="qdata.js"></script>
+<script src="data.js"></script>
+<script src="practice.js"></script>
+<script src="app.js"></script>
+<script>if("serviceWorker"in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{})</script>
+</body></html>
